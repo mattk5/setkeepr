@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%= link_to 'SETKEEPR', root_path, class: 'navbar-brand' %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <li class="navbar-nav">
+        <%= link_to 'PROFILE', current_user, class: 'navbar-brand' %>
+      </li>
+      <li class="navbar-nav">
+        <%= link_to 'LOG IN', login_path, class: 'navbar-brand' %>
+      </li>
+      <li class="navbar-nav">
+        <%= link_to 'LOGOUT', logout_path, method: :delete, class: 'navbar-brand' %>
+      </li>
+  </div>
+</nav>
