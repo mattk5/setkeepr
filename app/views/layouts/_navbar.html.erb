@@ -5,6 +5,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- will move logic out of views in the future. -->
       <% if !logged_in? %>
         <li class="navbar-nav">
           <%= link_to 'LOG IN', login_path, class: 'navbar-brand' %>
