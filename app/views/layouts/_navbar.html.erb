@@ -5,14 +5,17 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <li class="navbar-nav">
-        <%= link_to 'PROFILE', current_user, class: 'navbar-brand' %>
-      </li>
-      <li class="navbar-nav">
-        <%= link_to 'LOG IN', login_path, class: 'navbar-brand' %>
-      </li>
-      <li class="navbar-nav">
-        <%= link_to 'LOGOUT', logout_path, method: :delete, class: 'navbar-brand' %>
-      </li>
+      <% if !logged_in? %>
+        <li class="navbar-nav">
+          <%= link_to 'LOG IN', login_path, class: 'navbar-brand' %>
+        </li>
+      <% else %>
+        <li class="navbar-nav">
+          <%= link_to 'PROFILE', current_user, class: 'navbar-brand' %>
+        </li>
+        <li class="navbar-nav">
+          <%= link_to 'LOGOUT', logout_path, method: :delete, class: 'navbar-brand' %>
+        </li>
+      <% end %>
   </div>
 </nav>
